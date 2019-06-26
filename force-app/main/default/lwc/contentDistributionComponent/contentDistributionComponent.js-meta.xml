@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="fileDownloadComponent">
+    <apiVersion>46.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>crm_DealerPortalContentDistributionComponent</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property required="true" name="Type" type="String"/>
+            <property required="true" name="Subtype" type="String"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

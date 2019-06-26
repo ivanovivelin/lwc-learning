@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-feed">
+        <ul class="slds-feed__list">
+                <template if:true={content.data}>
+                    <li>
+                        <template for:each={content.data} for:item="item">
+                            <c-content-distribution-file-component 
+                            key={item.Id}
+                            item={item}
+                            ></c-content-distribution-file-component>
+                        </template>
+                    </li>
+                </template>
+        </ul>
+    </div>
+    <template if:true={content.error}>
+            <h1 class="slds-align_absolute-center" style="height:5rem"
+            >Derzeit sind keine Dateien verfügbar.</h1>
+    </template>
+    <template if:false={content.data}>
+            <h1 class="slds-align_absolute-center" style="height:5rem"
+            >Derzeit sind keine Dateien verfügbar.</h1>
+    </template>
+</template>
